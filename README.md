@@ -1,4 +1,4 @@
-#BeardedSteaks CodeCademy Repository#
+#BeardedSteaks CodeCademy Repository
 
 This repository has been create as practice and to keep code and file generated
 from my studies with CodeCademy.
