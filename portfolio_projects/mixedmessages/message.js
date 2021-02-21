@@ -1,7 +1,9 @@
 /* This file is to contain the message object for the
 mixed messages project */
 
-function getPhrase (startnum, tasknum, focusnum) {
+export const name = 'message';
+
+export function getPhrase (startnum, tasknum, focusnum) {
     const starter = {
         1: `Today is not a good day to `,
         2: `Today is a good day to `,
@@ -45,4 +47,6 @@ function getPhrase (startnum, tasknum, focusnum) {
 
 };
 
-console.log(getPhrase(5, 10, 4));
+export {name, getPhrase};
+
+//console.log(getPhrase(5, 10, 4));
