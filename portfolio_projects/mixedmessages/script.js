@@ -21,3 +21,4 @@ console.log(`Test message`);
  * Here is your productivity prompt to get your day started:
  *
  * Today is a good day to go to the beach for yourself.
+ * */
