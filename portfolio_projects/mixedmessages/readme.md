@@ -11,7 +11,7 @@
 
 This script is meant to be run in the terminal using Node.js
 
-``node script.js``
+    node script.js
 
 
 **Project Tasks**
