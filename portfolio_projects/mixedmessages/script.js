@@ -2,14 +2,9 @@
 
 Goal:  When runing the script it will generate and return a random message
 
-1. Setup main function & Test file setup.
-2. A method for generating random numbers
-3. Use random numbers to pull values from message bank
-4. Compile message components into a string
-5. Print/Return random message
 */
 
-
+//This is the main fuction.
 function generateRandomMessage () {
 
     let a = getRandomInt(1, 5);
@@ -23,29 +18,26 @@ function generateRandomMessage () {
 
 };
 
+console.log(generateRandomMessage());
+
+//support function to generate random numbers in a range.
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min)
-}
-//console.log(`Test message`);
-console.log(generateRandomMessage());
+};
 
-/* Projected Output:
- *
- * Here is your productivity prompt to get your day started:
- *
- * Today is a good day to go to the beach for yourself.
- * */
 
+//support function and message bank.
 function getPhrase (startnum, tasknum, focusnum) {
+
+  //3 objects below are the message bank.
   const starter = {
       1: `Today is not a good day to `,
       2: `Today is a good day to `,
       3: `Next week would be better to `,
       4: `Tomorrow might be a better day to `,
       5: `You may want to wait until next week to `,
-
   };
 
   const task = {
@@ -61,19 +53,16 @@ function getPhrase (startnum, tasknum, focusnum) {
       10: `run those errands `,
       11: `read a book `,
       12: `study a new language `,
-
   };
 
   const focus = {
-
       1: `for yourself.`,
       2: `for work.`,
       3: `with your family.`,
       4: `with a friend.`,
       5: `with a group of friends.`,
-
   };
-
+  //assigns the values from each object to a variable.
   let partA = starter[startnum];
   let partB = task[tasknum];
   let partC = focus[focusnum];
