@@ -9,14 +9,14 @@
 
 **Project Tasks**
 
-[] Plan Projects
-[] Come up with a Topic
-[] Create script and run it locally
-[] Set up version control
-[] Store message componets
-[] Create the message
-[] Put the program together
-[] Next Steps: Look at ways to expand the project
+* [>] Plan Projects
+* [X] Come up with a Topic
+* [>] Create script and run it locally
+* [X] Set up version control
+* [X] Store message componets
+* [] Create the message
+* [] Put the program together
+* [] Next Steps: Look at ways to expand the project
 
 *legend for tasks*
 *[X]* Complete
