@@ -7,6 +7,13 @@
     * using version control
 2. build a message generator program using Javascript.
 
+**How to Run**
+
+This script is meant to be run in the terminal using Node.js
+
+``node script.js``
+
+
 **Project Tasks**
 
 * [X] Plan Projects
