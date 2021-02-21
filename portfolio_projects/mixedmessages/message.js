@@ -1,7 +1,7 @@
 /* This file is to contain the message object for the
 mixed messages project */
 
-function getPhrase (startnum, tasknum, focusnum) = {
+function getPhrase (startnum, tasknum, focusnum) {
     const starter = {
         1: `Today is not a good day to `,
         2: `Today is a good day to `,
@@ -41,6 +41,8 @@ function getPhrase (startnum, tasknum, focusnum) = {
     let partB = task[tasknum];
     let partC = focus[focusnum];
 
-    return `${partA}${partB}${partC}`;`
+    return `${partA}${partB}${partC}`;
 
 };
+
+console.log(getPhrase(5, 10, 4));
