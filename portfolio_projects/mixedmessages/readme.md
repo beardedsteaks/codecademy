@@ -9,9 +9,7 @@
 
 **How to Run**
 
-This script is meant to be run in the terminal using Node.js
-
-    node script.js
+This project was orginially built to run in the terminal using node.js. However, this message generator has been converted to a website (currently not hosted)
 
 
 **Project Tasks**
@@ -23,7 +21,7 @@ This script is meant to be run in the terminal using Node.js
 * [X] Store message componets
 * [X] Create the message
 * [X] Put the program together
-* [] Next Steps: Look at ways to expand the project
+* [X] Next Steps: Look at ways to expand the project
 
 *legend for tasks*
 *[X]* Complete
