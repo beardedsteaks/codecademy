@@ -4,17 +4,55 @@ Goal:  When runing the script it will generate and return a random message
 
 */
 
+//message bank objects
+const starter = {
+  1: `Today is not a good day to `,
+  2: `Today is a good day to `,
+  3: `Next week would be better to `,
+  4: `Tomorrow might be a better day to `,
+  5: `You may want to wait until next week to `,
+};
+
+const task = {
+  1: `plan a trip `,
+  2: `get a workout in `,
+  3: `go for a run `,
+  4: `catch up on sleep `,
+  5: `go to the beach `,
+  6: `cross some items off of your to-do list `,
+  7: `get your shopping done `,
+  8: `make a budget `,
+  9: `clean your place `,
+  10: `run those errands `,
+  11: `read a book `,
+  12: `study a new language `,
+};
+
+const focus = {
+  1: `for yourself.`,
+  2: `for work.`,
+  3: `with your family.`,
+  4: `with a friend.`,
+  5: `with a group of friends.`,
+};
+
+
+
 //This is the main fuction.
 function generateRandomMessage () {
 
-    let a = getRandomInt(1, 5);
-    let b = getRandomInt(1, 12);
-    let c = getRandomInt(1, 5);
+  let startLength = objLength(starter);
+  let taskLength = objLength(task);
+  let focusLength = objLength(focus);
 
-    let phrase = getPhrase(a, b, c);
+  let a = getRandomInt(1, startLength);
+  let b = getRandomInt(1, taskLength);
+  let c = getRandomInt(1, focusLength);
 
-    console.log(`Here is your productivity prompt to get started:`);
-    return phrase;
+  let phrase = getPhrase(a, b, c);
+
+  console.log(`Here is your productivity prompt to get started:`);
+  return phrase;
 
 };
 
@@ -31,37 +69,6 @@ function getRandomInt(min, max) {
 //support function and message bank.
 function getPhrase (startnum, tasknum, focusnum) {
 
-  //3 objects below are the message bank.
-  const starter = {
-      1: `Today is not a good day to `,
-      2: `Today is a good day to `,
-      3: `Next week would be better to `,
-      4: `Tomorrow might be a better day to `,
-      5: `You may want to wait until next week to `,
-  };
-
-  const task = {
-      1: `plan a trip `,
-      2: `get a workout in `,
-      3: `go for a run `,
-      4: `catch up on sleep `,
-      5: `go to the beach `,
-      6: `cross some items off of your to-do list `,
-      7: `get your shopping done `,
-      8: `make a budget `,
-      9: `clean your place `,
-      10: `run those errands `,
-      11: `read a book `,
-      12: `study a new language `,
-  };
-
-  const focus = {
-      1: `for yourself.`,
-      2: `for work.`,
-      3: `with your family.`,
-      4: `with a friend.`,
-      5: `with a group of friends.`,
-  };
   //assigns the values from each object to a variable.
   let partA = starter[startnum];
   let partB = task[tasknum];
@@ -70,3 +77,15 @@ function getPhrase (startnum, tasknum, focusnum) {
   return `${partA}${partB}${partC}`;
 
 };
+
+
+function objLength(obj) {
+  var count = 0;
+
+  for(var prop in obj) {
+      if(obj.hasOwnProperty(prop))
+          ++count;
+  }
+
+  return count;
+}
