@@ -4,6 +4,11 @@ Goal:  When runing the script it will generate and return a random message
 
 */
 
+//variables
+
+const getPrompt = document.querySelector('.clickme');
+const giveResult = document.querySelector('.result');
+
 //message bank objects
 const starter = {
   1: `Today is not a good day to `,
@@ -35,8 +40,6 @@ const focus = {
   4: `with a friend.`,
   5: `with a group of friends.`,
 };
-
-
 
 //This is the main fuction.
 function generateRandomMessage () {
@@ -81,7 +84,7 @@ function getPhrase (startnum, tasknum, focusnum) {
 
 function objLength(obj) {
   var count = 0;
-  
+
   for(var prop in obj) {
       if(obj.hasOwnProperty(prop))
           ++count;
@@ -89,3 +92,9 @@ function objLength(obj) {
 
   return count;
 }
+
+getPrompt.addEventListener('click', ()=>{
+  let message = generateRandomMessage();
+  giveResult.innerHTML = `<p class="message">${message}</p>`;
+  const displayResult = giveResult.querySelector('.message');
+});
